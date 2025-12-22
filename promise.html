@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Register =()=>{
+            return new Promise((resolve,reject)=>{
+                let isregister=true;
+                setTimeout(()=>{
+                 if(isregister===true){
+                    resolve("Register sucessful");
+                 }  
+                 reject("oops Register unsucessful");
+                },2000)
+            })
+        }
+
+        const Login=()=>{
+            return new Promise((resolve,reject)=>{
+               let  islogin=false;
+                setTimeout(()=>{
+                    if(islogin===true){
+                        resolve("Logined sucessfully")
+                    }
+                    else{
+                        reject("Opps Logined fail")
+                    }
+                },3000)
+            })
+        }
+            
+        const ThankYou=()=>{
+            return new Promise((resolve)=>{
+                  setTimeout(() => {
+             console.log("Thnak you")   
+             resolve();
+            }, 4000);
+            })
+            }
+            
+            Register()
+            .then((value)=>{console.log(value); return Login();})
+            .then((value)=>{console.log(value);return ThankYou();})
+            .then((msgg)=>{console.log("All steps completed")})
+            .catch((err)=>{console.log(err)})    
+        
+    </script>
+</body>
+</html>

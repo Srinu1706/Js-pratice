@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hey Good evening these are, Higher order Functions ")
+        const Register =(callback)=>{
+            setTimeout(()=>{
+                console.log("Register Fisrt")
+                callback();
+            },5000)
+         }
+
+           const Login =(callback)=>{
+            setTimeout(()=>{
+                console.log("Then Login")
+                callback();
+            },4000)
+         }
+
+           const ThankYou =()=>{
+            setTimeout(()=>{
+                console.log("Thank you for Registering")
+            },3000)
+         }
+         
+
+         Register(function(){
+            Login(function (){
+                  ThankYou();
+            });
+         });
+        
+       
+    </script>
+</body>
+</html>
