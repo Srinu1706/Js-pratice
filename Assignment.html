@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const registerStudent =()=>{
+                return new Promise((resolve,reject)=>{
+                     isRegister=true;
+                     setTimeout(()=>{
+                    if(isRegister===true){
+                        resolve("Registered Sucessfully")
+                    }
+                    reject("Oops Student dint register sucessfully")
+                },2000)
+                })
+            }
+
+        const SendEmail=()=>{
+            return new Promise((resolve,reject)=>{
+                issend=true;
+                setTimeout(() => {
+                    if(issend===true){
+                        resolve("email sent sucssfully")
+                    }
+                    reject("Email not sent sucessfully")
+                }, 1000);
+            })
+        }
+
+            const enableLogin=()=>{
+                return new Promise((resolve,reject)=>{
+                    setTimeout(() => {
+                        isenabled=false;
+                        if(isenabled===true){
+                            resolve("Login Enabled")
+                        }
+                        reject("Oops login Not enabled")
+                    }, 1000);
+                })
+            }
+
+
+            registerStudent()
+            .then((value)=> {console.log(value); return SendEmail();})
+            .then((value)=>{console.log(value); return enableLogin ();})
+            .then((msg)=>{console.log(msg);console.log("all stpes cleared")})
+            .catch((err)=>{console.log(err,"Error Happend")})
+
+    </script>
+</body>
+</html>

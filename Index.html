@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // // const placeOrder=()=>{
+        //     return new Promise((resolve,reject)=>{
+        //        let isopen=true;
+        //       setTimeout(() => {
+        //         if(isopen){
+        //             console.log("Resturant is open,");
+        //             resolve();
+        //       }
+        //       else{
+        //         console.log("Resturant is closed,");
+        //         reject();   
+        //         }
+        //         }, 2000);
+        //     });
+        // };
+        //         // const prepareFood=()=>{
+        //     return new Promise((resolve,reject)=>{{
+        //         let ingredientsAvailable=true;
+        //         setTimeout(() => {
+        //             if(ingredientsAvailable){
+        //                 console.log("Ingredients are available,");
+        //                 resolve();
+        //             }
+        //             else{
+        //                 console.log("Ingredients are not available,");
+        //                 reject();
+        //             }
+        //         }, 3000);
+        //     }});
+        //         };
+        //             const deliveryFood=()=>{
+        //                 return new Promise((resolve,reject)=>{
+        //                     let deliveryAvailable=true;
+        //                     setTimeout(() => {
+        //                         if(deliveryAvailable){
+        //                             console.log("Delivery person is available,");
+        //                             resolve();
+        //                         }
+        //                         else{
+        //                             console.log("Delivery person is not available,");
+        //                             reject();
+        //                         }
+        //                     }, 2000);
+        //                 }); 
+        //             }
+
+
+        //                 prepareFood().then(()=>{
+        //             console.log("Food prepared successfully");
+        //         }).catch(()=>{
+        //             console.log("Food preparation failed");
+        //         }); 
+          
+        //           placeOrder().then(()=>{
+        //             console.log("Order placed successfully");
+        //         }).catch(()=>{
+        //             console.log("Order failed, try again later");
+        //         });
+
+        //         deliveryFood().then(()=>{
+        //             console.log("Food delivered successfully");
+        //         }).catch(()=>{
+        //             console.log("Delivery failed, try again later");        
+        //         })
+
+            // const cookRicee=()=>{
+            //         return new Promise((resolve,reject)=>{
+            //             console.log("Rice cooking started");
+            //             setTimeout(() => {
+            //                 console.log("Rice cooked");
+            //                 resolve();
+            //             }, 3000);
+            //         })  
+
+            // }
+            // const serveRicee=()=>{
+            //     console.log("Serving rice");
+            // }
+            // cookRicee().then(serveRicee);
+   
+        // const bookTickets=(sendConformation)=>{
+        //     console.log("Tickets booked for Akhanda 2 Thandavam")
+        //     setTimeout(() => {
+        //         console.log("Tickets booked successfully  ");
+        //         // sendConformation();
+        //     }, 2000);
+        //     setTimeout(() => {
+        //         sendConformation();
+        //     }, 3000);
+        // }
+        // const sendConformation =()=>{
+        //     console.log("Conformation sent to your mobile number")  
+        // }
+        // bookTickets(sendConformation);
+
+        // const cookRice=(serveRice)=>{
+        //     console.log("Cooking started");
+        //     setTimeout(() => {
+        //         console.log("Rice  cooked");
+        //         serveRice();
+        //     }, 3000);
+        // }
+        // const serveRice=()=>{
+        //     console.log("Serving rice");
+        // }
+        // cookRice(serveRice);
+
+      //     const washingclothes=(callback)=>{
+     //         console.log("Washing started");
+     //         setTimeout(()=>{
+    //             console.log("Washing completed");
+    //              callback();
+    //         },3000)
+    //      } ;
+    //     const dryclothes=()=>{
+    //         console.log("Drying clothes");
+    //     };
+    //    washingclothes(dryclothes);
+
+
+
+//     const searchRestaurant =()=>{
+//          isRestaurantFound=true;
+//          return new Promise((resolve,reject)=>{
+//             setTimeout(() => {
+//                 if(isRestaurantFound){
+//                     resolve("Restaurant found");
+//                 }
+//                 else{
+//                     reject("Restaurant not found");
+//                 }
+//             }, 2000);
+//          });
+
+//     }
+
+//     const selectFood=()=>{
+//         isFoodAvailable=true;
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//             if (isFoodAvailable) {
+//                 const a = 2;
+//                 const b = 3;
+//                 const sum = a + b;
+//                 resolve(`Food is available. Sum of ${a} and ${b} is ${sum}`);
+//             } else {
+//                 reject("Food is not available");
+//             }
+//             }, 2000);
+//         });
+//     }
+//     const placeOrder=()=>{
+//         isOrderplaced=true;
+//         return new Promise((resolve,reject)=>{
+//             if(isOrderplaced){
+//                 console.log("Order placed successfully");
+//             }
+//             else{
+//                 console.log("Order placing failed");
+//         }
+//     }
+
+//         const prepareOrder = () => {
+//     return new Promise((resolve, reject) => {
+//         let isOrderPrepared = true;
+
+//         setTimeout(() => {
+//             if (isOrderPrepared) {
+//                 resolve("Order prepared successfully");
+//             } else {
+//                 reject("Order preparation failed");
+//             }
+//         }, 3000);
+//     });
+// };
+
+//     const deliverOrder=()=>{
+//         isDeliveryAvailable=true;
+//         return new Promise((resolve,reject)=>{
+//             setTimeout(() => {
+//                 if(isDeliveryAvailable){
+//                     resolve("preparing order");
+//                 }
+//                 else{
+//                     reject("Delivery failed");
+//                 }
+//             }, 2000);
+//         });
+//     }
+//     searchRestaurant().then((message)=>{
+//         console.log(message);
+//         return selectFood();
+
+//     })
+//     .then((message)=>{
+//         console.log(message);
+//         return placeOrder();
+//     })
+//     .then((msg) => {
+//         console.log(msg);
+//         return prepareOrder();
+//     })
+//     .then((msg) => {
+//         console.log(msg);
+//         return deliverOrder();
+//     })
+//     .then((msg) => {
+//         console.log(msg);
+//     })
+//     .catch((err) => {
+//         console.log("❌ Error:", err);
+//     });
+
+        // const orderPizza = (callback) => {
+        //     console.log("Ordeed pizza...");
+        //        callback();
+        //     setTimeout(() => {
+        //         console.log("Pizza prearing.");
+        //     }, 3000);
+        //     setTimeout(() => {
+        //         console.log("Pizza is ready.");
+        //     }, 5000);
+        // }
+        // const work = () => {
+        //     setTimeout(() => {
+        //         console.log("Doing my work while waiting for pizza...");
+        //     }, 2000);
+            
+        // }
+        // orderPizza(work);
+
+       
+
+
+
+            </script>
+  
+</head>
+<body>
+    
+</body>
+</html>
