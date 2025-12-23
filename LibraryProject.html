@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const wait= (ms)=>{
+        return new Promise(resolve=>{
+            setTimeout(resolve,ms)
+        })
+
+    }
+       const getUser = async () =>{
+        let useravalible=true;
+        await wait(2000);
+        if(useravalible){
+            const user="Srinivas Bandaru";
+            console.log("User feteched "+user);
+            return user;
+        }
+        else{
+            throw "User not found";
+        }
+       }
+       const fetchBook=async (user)=>{
+        let booksavalible=true;
+        await wait(2500);
+        if(booksavalible){
+        const books  =["JavaScript","React js","SpringBoot"];
+        console.log("Books fetched for "+user+" : "+books)
+        return books;
+        }
+        else{
+            throw "oops failed to fetch the books";
+        }
+       }
+
+       const DisplayBooks = async(books)=>{
+        let isdipayed=true;
+        await wait(3000)
+        if(isdipayed){
+            const display="Books displayed successfully";
+            console.log(books+" dispalyed sucessfully")  
+            return display;
+        }
+        else{
+            throw "Books not displayed successfully";
+        }
+       }
+       const runWeather= async()=>{
+        try{
+        let getuserResult= await getUser();
+        let fetchBookResult=await fetchBook(getuserResult);
+        let DisplayBooksResult=await DisplayBooks(fetchBookResult);
+           console.log("all steps completed ")
+        }
+        catch(error){
+            console.log(error)
+        }
+       }       
+       runWeather();
+    
+       wait();
+    </script>
+</body>
+</html>

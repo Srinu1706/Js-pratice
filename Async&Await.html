@@ -7,12 +7,72 @@
 </head>
 <body>
     <script>
-        // return type of Async is Promis ,if we want use the result of promise we should use then();
-      function clculate (){
-        x=7+5;
+      //   // return type of Async is Promis ,if we want use the result of promise we should use then();
+      // function clculate (){
+      //   x=7+5;
+      // }
+      //   let result =x
+      //   console.log(result)
+
+      
+       function OrderPizza() {
+        return new Promise((resolve,reject)=>{
+          let isavalible=true;
+        setTimeout(()=>{
+          if(isavalible===true){
+              resolve("orderd Pizza")
+          }
+          else{
+            reject("No pizzas avalible")
+          }
+        },2000)
+        })
       }
-        let result =x
-        console.log(result)
+
+       function makePayment() {
+        return new Promise((resolve,reject)=>{
+          let ispaymentDone=true;
+            setTimeout(() => {
+              if(ispaymentDone===true){
+                resolve("Payment sucessfully done")
+              }
+              else{
+                reject("Payment failed")
+              }
+            }, 3000);
+        })
+      }
+       function DeliverPizza() {
+        return new Promise((resolve,reject)=>{
+          let isdelivery=true;
+          setTimeout(() => {
+            if(isdelivery===true){
+              resolve("pizza delivery sucessfully")
+            }
+            else{
+              reject("Pizza delivery not sucessfull")
+            }
+          }, 4000);
+        })
+      }
+
+     async function helper (){
+      try{
+        let OrderPizzareuslt=  OrderPizza();
+        console.log(OrderPizzareuslt)
+         
+        let PaymentResult= await makePayment();
+        console.log(PaymentResult)
+
+        let DeliverPizzaResult= await DeliverPizza();
+        console.log(DeliverPizzaResult)
+         }
+          catch(error){
+        console.log(error)
+      }
+        
+      }
+     helper();
     </script>
 </body>
 </html>
