@@ -7,25 +7,32 @@
 </head>
 <body>
     <script>
-      //   // return type of Async is Promis ,if we want use the result of promise we should use then();
-      // function clculate (){
-      //   x=7+5;
-      // }
-      //   let result =x
-      //   console.log(result)
-
       
-       function OrderPizza() {
-        return new Promise((resolve,reject)=>{
-          let isavalible=true;
-        setTimeout(()=>{
-          if(isavalible===true){
-              resolve("orderd Pizza")
-          }
-          else{
-            reject("No pizzas avalible")
-          }
-        },2000)
+      //  function OrderPizza() {
+      //   return new Promise((resolve,reject)=>{
+      //     let isavalible=true;
+      //   setTimeout(()=>{
+      //     if(isavalible===true){
+      //         resolve("orderd Pizza")
+      //     }
+      //     else{
+      //       reject("No pizzas avalible")
+      //     }
+      //   },2000)
+      //   })
+      // }
+
+      function OrderPizza(){
+        return new Promise((reolve,reject)=>{
+          let isavalible= true;
+          setTimeout(() => {
+            if(isavalible==true){
+              resolve("Order Pizza");
+            }
+            else{
+              reject("No pizzas avalible")
+            }
+          }, 2000);
         })
       }
 

@@ -1,16 +1,3 @@
-// let username;
-// document.getElementById("mysubmit").onclick=()=>{
-//     username=document.getElementById("textBox").value;
-//     if(username===""){
-//         console.log("enter username")
-//     }
-//     else{
-//         console.log("Hey"+username)
-//     }
-//     // console.log(username)
-//     age=document.getElementById("myage").value
-//     console.log(age)
-// }
 
 document.getElementById("result").innerText=result
 
@@ -45,8 +32,6 @@ document.getElementById("mymul").onclick=()=>{
     console.log(result)
 }
 
-
-
 document.getElementById("mydiv").onclick=()=>{
     let number1;
     let  number2;
@@ -68,3 +53,4 @@ document.getElementById("Myreset").onclick=()=>{
 
      document.getElementById("result").innerText="";
 }
+
