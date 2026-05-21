@@ -34,8 +34,37 @@ const ThnakYou=()=>{
     
 }
 
-register(()=>{
-    login(()=>{
-        ThnakYou();
-    })
+// register(()=>{
+//     login(()=>{
+//         ThnakYou();
+//     })
+// })
+
+
+const arr=[12,34,56,78,90];
+
+const filteredArr=arr.filter((num)=>{
+    return num!==56;
 })
+
+console.log(filteredArr);
+//-------------------------------------------
+const mappedArray=arr.map((num)=>num +1);
+console.log(mappedArray);
+//-------------------------------------------
+const ReducedValue=arr.reduce((acc,num)=>{
+    return acc+num;
+},0)
+console.log(ReducedValue);
+//-------------------------------------------
+
+const findValue=arr.find((num)=>{
+    return num===56;
+})
+console.log(findValue);
+//-------------------------------------------
+
+const forEachValue=arr.forEach((num)=>{
+    console.log(num);
+})
+//-------------------------------------------
